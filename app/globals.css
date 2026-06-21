@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  /* পুরো অ্যাপের ডিফল্ট ফন্ট এবং তার লেটার স্পেসিং (tracking) একসাথে সেট করা */
+  --font-sans: var(--font-rethink-sans), sans-serif;
+
+  /* পুরো অ্যাপের ডিফল্ট লেটার স্পেসিং কিছুটা বাড়িয়ে দেওয়া হলো */
+  --tracking-normal: 0;
+}
+
+/* যদি ওপরের নিয়মেও কোনো ক্লাস এটিকে আটকে দেয়, তবে এই নিচের রুলটি ফোর্স করবে */
+body {
+  letter-spacing: 0;
+}
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-rethink-sans);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #ededed;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-rethink-sans), Arial, Helvetica, sans-serif;
+  letter-spacing: 0;
+}
+
+.marquee-track {
+  animation: press-marquee 22s linear infinite;
+}
+
+@keyframes press-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
