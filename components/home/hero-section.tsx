@@ -135,7 +135,85 @@ export function HeroSection() {
             </p>
           </div>
 
-          
+          {/* Service Tabs + Featured Buttons Grid */}
+          <div className="mt-10 w-full max-w-[1240px] mx-auto sm:mt-12 lg:mt-14">
+            {/* Top Service Tabs */}
+            <div className="grid grid-cols-2 sm:grid-cols-4">
+              {topServiceTabs.map((service) => (
+                <ServiceTabCard key={service.name} service={service} />
+              ))}
+            </div>
+
+            {/* Featured Service Buttons */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 bg-gradient-to-b from-[rgba(0,0,0,0.10)] to-[rgba(55,55,55,0.07)] border border-[rgba(0,0,0,0.05)] px-[128px] py-9 shadow-[0_4px_4px_rgba(0,0,0,0.05)] max-lg:px-6 max-md:px-4">
+              {featuredServiceButtons.map((label) => (
+                <Link
+                  key={label}
+                  href="/"
+                  className="flex h-[51px] items-center justify-center rounded-[10px] bg-gradient-to-r from-[rgba(195,99,227,0.80)] via-[rgba(210,58,162,0.80)] to-[rgba(238,29,82,0.80)] px-7 text-[14px] font-bold uppercase tracking-wide text-white no-underline outline outline-[0.3px] outline-[rgba(0,0,0,0.15)] transition-opacity hover:opacity-90 sm:text-[16px]"
+                >
+                  {label}
+                </Link>
+              ))}
+            </div>
+
+            {/* Bottom Service Tabs */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5">
+              {bottomServiceTabs.map((service) => (
+                <ServiceTabCard key={service.name} service={service} bottom />
+              ))}
+            </div>
+
+            {/* Activity Bar */}
+            <div className="flex flex-wrap items-center justify-center gap-3.5 border-t border-[rgba(0,0,0,0.16)] px-4 py-5 sm:gap-4 sm:px-6 lg:px-8">
+              {/* Star Rating */}
+              <div className="flex items-center gap-2.5">
+                {Array.from({ length: reviewStars }).map((_, i) => (
+                  <span
+                    key={i}
+                    className="flex h-7 w-7 items-center justify-center rounded-[5px] bg-[#01AAFF] text-[14px] text-white"
+                  >
+                    {starLabel}
+                  </span>
+                ))}
+              </div>
+
+              <span className="hidden h-[34px] w-px bg-[rgba(80,80,80,0.30)] sm:block" />
+
+              {/* Progress Bar */}
+              <div className="h-[46px] w-[280px] rounded-[11px] bg-[rgba(1,170,255,0.80)] sm:w-[340px]" />
+
+              {/* Delivery Status */}
+              <div className="flex items-center gap-2">
+                <span className="h-2.5 w-2.5 rounded-full bg-[#1ED760]" />
+                <span className="text-[14px] text-white">
+                  <strong>{heroActivityBadges[0].split(" delivered")[0]}</strong>{" "}
+                  delivered
+                </span>
+              </div>
+
+              <span className="text-[14px] text-white/70">{heroActivityBadges[1]}</span>
+
+              <span className="flex h-4 w-4 items-center justify-center rounded-full bg-white">
+                <svg width="6" height="5" viewBox="0 0 6 5" fill="none">
+                  <path d="M0 0L6 2.5L0 5V0Z" fill="#1ED760" />
+                </svg>
+              </span>
+
+              <span className="hidden h-[34px] w-px bg-[rgba(80,80,80,0.30)] sm:block" />
+
+              {/* Review Box */}
+              <div className="flex h-10 w-22 items-center justify-center rounded-[10px] border border-[rgba(0,0,0,0.40)] bg-white" />
+
+              {/* Play Button */}
+              <button className="flex items-center gap-2.5">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" className="text-black">
+                  <polygon points="4,1 16,9 4,17" />
+                </svg>
+                <span className="text-[16px] font-semibold capitalize text-black">play</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -20,11 +20,9 @@ export function ServiceTabCard({
     : [
       "relative flex min-h-[56px] items-center justify-center gap-3.5 bg-[rgba(35,58,91,0.65)] px-[14px] py-[10px] sm:min-h-[72px] sm:justify-start sm:px-[18px] sm:py-[12px] lg:h-[100px] lg:px-[28px]",
       service.highlighted
-        ? "z-[2] min-h-[64px] rounded-tl-[20px] rounded-tr-[20px] bg-transparent shadow-[0_10px_24px_rgba(0,0,0,0.16)] after:hidden before:hidden sm:mt-[-12px] sm:min-h-[84px] sm:rounded-tl-[27px] sm:rounded-tr-[27px] lg:mt-0 lg:h-[100px]"
+        ? "first:rounded-tl-[22px]"
         : "border-b border-[rgba(79,110,154,0.22)]",
-      !service.highlighted
-        ? "first:rounded-tl-[22px] last:rounded-tr-[22px]"
-        : "",
+      "first:rounded-tl-[32px] last:rounded-tr-[22px]",
     ].join(" ")
     ;
 
@@ -35,7 +33,6 @@ export function ServiceTabCard({
       style={
         isHighlightedTopCard
           ? {
-              backgroundColor: "#ffffff",
               backgroundImage: `url(${tiktokServiceBg.src})`,
               backgroundPosition: "right center",
               backgroundRepeat: "no-repeat",
