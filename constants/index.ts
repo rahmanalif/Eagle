@@ -231,7 +231,7 @@ export const eagleLikeFeatures: EagleLikeFeature[] = [
     {
         title: "Social Media Exposure",
         description:
-            "A solid social media presence is essential in the digital world, and this section showcases how our tailored solutions help your brand stand out across every platform.",
+            "As Social Media continues to dominate the digital world, creators struggle to get the attention their content deserves.\nThe moment People spot posts with high engagement followers, likes, and comments they're drawn to find out what's behind the excitement.",
         image: social1,
         imageAlt: "Person holding a phone with floating social icons",
         imagePosition: "right",
@@ -239,7 +239,7 @@ export const eagleLikeFeatures: EagleLikeFeature[] = [
     {
         title: "Instant Growth Boost",
         description:
-            "Engagement grows faster when your content reaches the right audience at the right time. Our services are built to create momentum with followers, views, reactions, and social proof that feels natural.",
+            "It brings continuous engagement to your Instagram and TikTok, boosting your fame and authority on both platforms.\nIt's all possible with our instant Instagram and TikTok engagement — safe, reliable, and built for real, organic results",
         image: social2,
         imageAlt: "Excited person reacting to social media growth on a phone",
         imagePosition: "left",
@@ -305,6 +305,113 @@ export const eagleServiceFeature: EagleServiceFeature = {
                 "",
         },
     ],
+};
+
+export const serviceVariantBullets: Record<string, { bullets: string[]; buttonLabel: string; cardTitle: string }> = {
+    "instagram-followers": {
+        bullets: [
+            "Genuine followers delivered safely with zero risks",
+            "Different follower packages available to choose",
+            "Followers delivered fast and securely",
+            "Cheap prices & real results",
+            "Guaranteed safe and secure",
+            "Support available 24/7",
+            "Get instant organic growth",
+        ],
+        buttonLabel: "Buy Instagram Followers",
+        cardTitle: "Why Are Instagram Followers Important?",
+    },
+    "instagram-likes": {
+        bullets: [
+            "Real likes from authentic Instagram users",
+            "Different follower packages available to choose",
+            "Likes delivered instantly",
+            "Option to split your likes across several posts",
+            "Cost-effective",
+            "Total safety for user data and accounts",
+            "Explosive likes growth",
+        ],
+        buttonLabel: "Buy Instagram Likes",
+        cardTitle: "Why Are Instagram Likes Important?",
+    },
+    "instagram-views": {
+        bullets: [
+            "Genuine video views by real Insta users",
+            "Choose from 500–500K real views",
+            "Lightning-fast delivery",
+            "Option to split views across multiple posts",
+            "Cheap prices",
+            "Safe and organic growth guaranteed",
+            "24/7 customer support",
+        ],
+        buttonLabel: "Buy Instagram Views",
+        cardTitle: "Why Are Instagram Views Important?",
+    },
+    "instagram-comments": {
+        bullets: [
+            "Real comments from authentic accounts",
+            "Custom comment options available",
+            "Comments delivered quickly",
+            "Cheap prices & real results",
+            "Guaranteed safe and secure",
+            "Support available 24/7",
+            "Boost your post engagement",
+        ],
+        buttonLabel: "Buy Instagram Comments",
+        cardTitle: "Why Are Instagram Comments Important?",
+    },
+    "tiktok-followers": {
+        bullets: [
+            "Genuine followers delivered safely with zero risks",
+            "Different follower packages available to choose",
+            "Followers delivered fast and securely",
+            "Cheap prices & real results",
+            "Guaranteed safe and secure",
+            "Support available 24/7",
+            "Get instant organic growth",
+        ],
+        buttonLabel: "Buy TikTok Followers",
+        cardTitle: "Why Are TikTok Followers Important?",
+    },
+    "tiktok-likes": {
+        bullets: [
+            "Real likes from authentic TikTok users",
+            "Different like packages available to choose",
+            "Likes delivered instantly",
+            "Option to split your likes across several posts",
+            "Cost-effective",
+            "Total safety for user data and accounts",
+            "Explosive likes growth",
+        ],
+        buttonLabel: "Buy TikTok Likes",
+        cardTitle: "Why Are TikTok Likes Important?",
+    },
+    "tiktok-views": {
+        bullets: [
+            "Genuine video views by real TikTok users",
+            "Choose from 500–500K real views",
+            "Lightning-fast delivery",
+            "Option to split views across multiple posts",
+            "Cheap prices",
+            "Safe and organic growth guaranteed",
+            "24/7 customer support",
+        ],
+        buttonLabel: "Buy TikTok Views",
+        cardTitle: "Why Are TikTok Views Important?",
+    },
+    "tiktok-comments": {
+        bullets: [
+            "Real comments from authentic accounts",
+            "Custom comment options available",
+            "Comments delivered quickly",
+            "Cheap prices & real results",
+            "Guaranteed safe and secure",
+            "Support available 24/7",
+            "Boost your post engagement",
+        ],
+        buttonLabel: "Buy TikTok Comments",
+        cardTitle: "Why Are TikTok Comments Important?",
+    },
 };
 
 export type HowItWorksStep = {

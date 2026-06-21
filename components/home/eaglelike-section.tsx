@@ -43,11 +43,11 @@ function PortraitFrame({
 }) {
   return (
     <div className={`relative ${widthClassName}`}>
-      <div className="absolute inset-[8%] rounded-[2.5rem] bg-[rgba(0,124,255,0.26)] blur-[26px] lg:blur-[34px]" />
+      <div className="absolute inset-[8%] rounded-[80px] bg-[rgba(0,124,255,0.26)] blur-[26px] sm:rounded-[2.5rem] lg:blur-[34px]" />
       <Image
         src={src}
         alt={alt}
-        className="relative z-[1] h-auto w-full rounded-[2.5rem] object-cover"
+        className="relative z-[1] h-auto w-full rounded-[80px] object-cover shadow-[0_7px_30px_rgba(20,137,233,0.60)] sm:rounded-[2.5rem] sm:shadow-none"
         priority
       />
     </div>
@@ -68,16 +68,16 @@ function FeatureCopy({
   maxWidthClassName?: string;
 }) {
   return (
-    <div className={`w-full ${maxWidthClassName}`}>
+    <div className={`w-full text-center sm:text-left ${maxWidthClassName}`}>
       <h2
-        className={`text-[2.15rem] font-bold leading-[0.94] tracking-[-0.05em] sm:text-[2.4rem] md:text-[2.1rem] lg:text-[3.12rem] ${gradient
+        className={`text-[30px] font-semibold capitalize leading-[34px] sm:text-[2.4rem] sm:font-bold sm:normal-case sm:leading-[0.94] sm:tracking-[-0.05em] md:text-[2.1rem] lg:text-[3.12rem] ${gradient
           ? "bg-[linear-gradient(180deg,#f168ff_0%,#9e53ff_100%)] bg-clip-text text-transparent"
           : "text-white"
           }`}
       >
         {title}
       </h2>
-      <p className="mt-8 text-[13px] leading-[1.56] text-[#8d95a3] md:text-[11px] lg:mt-10 lg:text-[15px]">
+      <p className="mt-[25px] text-[15px] font-medium leading-[21px] text-[#99A1AF] sm:mt-8 sm:text-[13px] sm:font-normal sm:leading-[1.56] sm:text-[#8d95a3] md:text-[11px] lg:mt-10 lg:text-[15px]">
         {description}
       </p>
 
@@ -114,7 +114,7 @@ export function EagleLikeSection() {
 
       <div className="relative z-[1] mx-auto w-full max-w-[1065px]">
         <div className="w-full text-center">
-          <p className="text-[18px] uppercase tracking-[0.18em] text-[#97a0ad]">Eagle Likes is seen on...</p>
+          <p className="text-[14px] font-semibold text-[#99A1AF] sm:text-[18px] sm:uppercase sm:tracking-[0.18em]">Eagle Likes is seen on...</p>
           <div className="mt-5 flex w-full items-center justify-between gap-x-4 py-6 md:gap-x-8">
             {pressLogos.map((logo, index) => (
               <Image key={index} src={logo} alt="Press logo" className="h-[36px] w-auto shrink-0 object-contain opacity-95" />
@@ -122,24 +122,24 @@ export function EagleLikeSection() {
           </div>
         </div>
 
-        <div className=" space-y-14 lg:mt-[56px] lg:space-y-[78px]">
+        <div className="space-y-[35px] sm:space-y-14 lg:mt-[56px] lg:space-y-[78px]">
           {/* Row 1 */}
-          <div className="flex flex-col items-center gap-7 md:grid md:grid-cols-[248px_320px] md:justify-between lg:grid-cols-[360px_380px]">
+          <div className="flex flex-col items-center gap-[35px] md:grid md:grid-cols-[248px_320px] md:justify-between lg:grid-cols-[360px_380px]">
             <div className="order-2 md:order-1">
-              <FeatureCopy title="Social Media Exposure" description="As Social Media continues to dominate the digital world, creators struggle to get the attention their content deserves. The moment people post with high engagement—followers, likes, and comments—they've drawn others to find out what's behind the excitement." />
+              <FeatureCopy title="Social Media Exposure" description="As Social Media continues to dominate the digital world, creators struggle to get the attention their content deserves. The moment People spot posts with high engagement followers, likes, and comments they're drawn to find out what's behind the excitement." />
             </div>
             <div className="order-1 md:order-2 flex justify-center lg:justify-end">
-              <PortraitFrame src={images.social1} alt="Woman with phone" widthClassName="w-[250px] lg:w-[380px]" />
+              <PortraitFrame src={images.social1} alt="Woman with phone" widthClassName="w-[240px] sm:w-[250px] lg:w-[380px]" />
             </div>
           </div>
 
           {/* Row 2 */}
-          <div className="flex flex-col items-center gap-7 md:grid md:grid-cols-[320px_248px] md:justify-between lg:grid-cols-[380px_360px]">
+          <div className="flex flex-col items-center gap-[35px] md:grid md:grid-cols-[320px_248px] md:justify-between lg:grid-cols-[380px_360px]">
             <div className="flex justify-center md:justify-start">
-              <PortraitFrame src={images.social2} alt="Man reacting" widthClassName="w-[250px] lg:w-[380px]" />
+              <PortraitFrame src={images.social2} alt="Man reacting" widthClassName="w-[240px] sm:w-[250px] lg:w-[380px]" />
             </div>
             <div>
-              <FeatureCopy title="Instant Growth Boost" description="It brings continuous engagement to your Instagram and TikTok, boosting your fame and authority. It's all possible with our instant engagement—safe, reliable, and built for real results." />
+              <FeatureCopy title="Instant Growth Boost" description="It brings continuous engagement to your Instagram and TikTok, boosting your fame and authority on both platforms. It's all possible with our instant Instagram and TikTok engagement — safe, reliable, and built for real, organic results" />
             </div>
           </div>
 

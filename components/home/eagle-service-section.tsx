@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { eagleServiceFeature, images } from "@/constants";
+import { eagleServiceFeature, serviceVariantBullets, images } from "@/constants";
 
 type ServiceCardArtVariant =
   | "blue-eagle"
@@ -14,6 +14,7 @@ type ServiceCardArtVariant =
 
 type ServiceSectionVariant = {
   cardKeys: [string, string];
+  variantKey: string;
   containerClassName: string;
   gridClassName: string;
   leftCardsClassName: string;
@@ -32,6 +33,7 @@ type ServiceSectionVariant = {
 const serviceSectionVariants: ServiceSectionVariant[] = [
   {
     cardKeys: ["blue", "blue"],
+    variantKey: "instagram-followers",
     containerClassName:
       "mt-14 rounded-[40px] bg-gradient-to-b from-[rgba(0,132,255,0.17)] to-[rgba(5,5,5,0.17)] px-5 py-8 shadow-[0_4px_4px_rgba(0,0,0,0.25)] md:px-8 lg:px-[50px] lg:py-[68px]",
     gridClassName:
@@ -52,6 +54,7 @@ const serviceSectionVariants: ServiceSectionVariant[] = [
   },
   {
     cardKeys: ["pink", "pink"],
+    variantKey: "instagram-likes",
     containerClassName:
       "mt-8 rounded-[34px] bg-gradient-to-b from-[#2c042d] to-[#050505] sm:px-7 md:px-8 md:py-8 lg:px-8 lg:py-8",
     gridClassName:
@@ -70,6 +73,7 @@ const serviceSectionVariants: ServiceSectionVariant[] = [
   },
   {
     cardKeys: ["green", "green"],
+    variantKey: "instagram-views",
     containerClassName:
       "mt-14 rounded-[34px] bg-gradient-to-b from-[#042e09] to-[#050505] px-8 py-9 shadow-[0_30px_90px_rgba(0,0,0,0.34)] md:px-10 md:py-11 lg:px-8 lg:py-10",
     gridClassName:
@@ -90,6 +94,7 @@ const serviceSectionVariants: ServiceSectionVariant[] = [
   },
   {
     cardKeys: ["red", "red"],
+    variantKey: "instagram-comments",
     containerClassName:
       "mt-8 rounded-[34px] bg-gradient-to-b from-[#2f0505] to-[#050505] sm:px-7 md:px-8 md:py-8 lg:px-8 lg:py-8",
     gridClassName:
@@ -109,6 +114,7 @@ const serviceSectionVariants: ServiceSectionVariant[] = [
   },
   {
     cardKeys: ["blue", "blue"],
+    variantKey: "tiktok-followers",
     containerClassName:
       "mt-14 rounded-[40px] bg-gradient-to-b from-[rgba(0,132,255,0.17)] to-[rgba(5,5,5,0.17)] px-5 py-8 shadow-[0_4px_4px_rgba(0,0,0,0.25)] md:px-8 lg:px-[50px] lg:py-[68px]",
     gridClassName:
@@ -129,6 +135,7 @@ const serviceSectionVariants: ServiceSectionVariant[] = [
   },
   {
     cardKeys: ["pink", "pink"],
+    variantKey: "tiktok-likes",
     containerClassName:
       "mt-8 rounded-[34px] bg-gradient-to-b from-[#2c042d] to-[#050505] sm:px-7 md:px-8 md:py-8 lg:px-8 lg:py-8",
     gridClassName:
@@ -147,6 +154,7 @@ const serviceSectionVariants: ServiceSectionVariant[] = [
   },
   {
     cardKeys: ["green", "green"],
+    variantKey: "tiktok-views",
     containerClassName:
       "mt-14 rounded-[34px] bg-gradient-to-b from-[#042e09] to-[#050505] px-8 py-9 shadow-[0_30px_90px_rgba(0,0,0,0.34)] md:px-10 md:py-11 lg:px-8 lg:py-10",
     gridClassName:
@@ -167,6 +175,7 @@ const serviceSectionVariants: ServiceSectionVariant[] = [
   },
   {
     cardKeys: ["red", "red"],
+    variantKey: "tiktok-comments",
     containerClassName:
       "mt-8 rounded-[34px] bg-gradient-to-b from-[#2f0505] to-[#050505] sm:px-7 md:px-8 md:py-8 lg:px-8 lg:py-8",
     gridClassName:
@@ -310,6 +319,12 @@ function ServiceSectionBlock({
     `${variant.cardKeys[1]}-write` as ServiceCardArtVariant,
   ];
 
+  const variantData = serviceVariantBullets[variant.variantKey];
+  const bullets = variantData?.bullets ?? eagleServiceFeature.bullets;
+  const buttonLabel = variantData?.buttonLabel ?? eagleServiceFeature.buttonLabel;
+  const cardTitle = variantData?.cardTitle ?? "";
+  const cardDescription = "Likes increase your content's reach by attracting new viewers and boosting your profile's credibility. The more likes, the higher your chances to trend.";
+
   return (
     <div
       className={`mx-auto mt-0 w-full max-w-[1078px] ${variant.containerClassName}`}
@@ -325,10 +340,10 @@ function ServiceSectionBlock({
                 >
                   <ServiceCardArt variant={cardVariants[index]} />
                   <h4 className="mt-4 text-[16px] font-semibold leading-[1.45] text-white">
-                    {card.title}
+                    {cardTitle}
                   </h4>
-                  <p className="mt-4 break-all text-[10px] leading-[1.55] text-[#8f7a92]">
-                    {card.url}
+                  <p className="mt-4 text-[11px] leading-[1.5] text-[#99A1AF]">
+                    {cardDescription}
                   </p>
                 </article>
               ))}
@@ -350,7 +365,7 @@ function ServiceSectionBlock({
               </h3>
 
               <div className="mt-7 space-y-3.5">
-                {eagleServiceFeature.bullets.map((bullet) => (
+                {bullets.map((bullet) => (
                   <div key={`${titleAccent}-${bullet}`} className="flex items-start gap-3">
                     <span className={`mt-[2px] ${variant.bulletIconClassName}`}>
                       <svg width="8" height="7" viewBox="0 0 8 7" fill="none">
@@ -363,7 +378,7 @@ function ServiceSectionBlock({
               </div>
 
               <button type="button" className={variant.buttonClassName}>
-                {eagleServiceFeature.buttonLabel}
+                {buttonLabel}
               </button>
             </article>
           </>
@@ -385,7 +400,7 @@ function ServiceSectionBlock({
               </h3>
 
               <div className="mt-8 space-y-4">
-                {eagleServiceFeature.bullets.map((bullet) => (
+                {bullets.map((bullet) => (
                   <div key={`${titleAccent}-${bullet}`} className="flex items-start gap-3">
                     <span className={`mt-[2px] ${variant.bulletIconClassName}`}>
                       <svg width="8" height="7" viewBox="0 0 8 7" fill="none">
@@ -398,7 +413,7 @@ function ServiceSectionBlock({
               </div>
 
               <button type="button" className={variant.buttonClassName}>
-                {eagleServiceFeature.buttonLabel}
+                {buttonLabel}
               </button>
             </article>
 
@@ -411,13 +426,10 @@ function ServiceSectionBlock({
                   <ServiceCardArt variant={cardVariants[index]} />
                   <div className="mt-auto flex flex-col items-center gap-[23px]">
                     <h4 className="text-[18px] font-bold capitalize leading-[30px] text-white">
-                      {card.title}
+                      {cardTitle}
                     </h4>
-                    <p className="break-all text-[15px] leading-[24px] text-[#99A1AF]">
-                      {card.url}
-                    </p>
                     <p className="text-[15px] leading-[24px] text-[#99A1AF]">
-                      {card.description}
+                      {cardDescription}
                     </p>
                   </div>
                 </article>
@@ -481,11 +493,14 @@ export function EagleServiceSection() {
 
       <div className="relative z-[2] mx-auto max-w-[1078px]">
         <div className="mx-auto max-w-[760px] text-center">
-          <h2 className="text-[clamp(2.1rem,3.6vw,54px)] font-bold leading-[65px] tracking-[0] text-white">
-            Eagle Likes <span className="text-[#11a8ff]">Services</span>
+          <h2 className="text-[30px] font-semibold capitalize leading-[38px] tracking-[0] text-white sm:text-[clamp(2.1rem,3.6vw,54px)] sm:font-bold sm:leading-[65px]">
+            Eagle Likes <span className="text-[#01D0FF]">Services</span>
           </h2>
-          <p className="mt-4 font-[var(--font-inter)] text-[16px] leading-[24px] tracking-[0] text-[#99a1af]">
-            {eagleServiceFeature.description}
+          <p className="mt-[25px] font-[var(--font-inter)] text-[14px] leading-[19.6px] tracking-[0] text-[#99a1af] sm:mt-4 sm:text-[16px] sm:leading-[24px]">
+            Transform your social media journey with reliable{" "}
+            <span className="font-semibold text-[#62ABFF]">Instagram</span> and{" "}
+            <span className="font-semibold text-[#62ABFF]">TikTok growth solutions</span>.
+            {" "}Gain real followers, likes, and views safely and instantly, helping your content reach more people and increasing your engagement organically
           </p>
         </div>
 
@@ -501,15 +516,15 @@ export function EagleServiceSection() {
         <ServiceSectionBlock
           variant={{ ...serviceSectionVariants[1], compact: true }}
           titlePrefix={titleStart}
-          titleAccent={eagleServiceFeature.accent}
-          titleSuffix={eagleServiceFeature.title.split(eagleServiceFeature.accent)[1]}
+          titleAccent={`${eagleServiceFeature.accent} `}
+          titleSuffix="Likes"
           firstCard={firstCard}
           secondCard={secondCard}
         />
         <ServiceSectionBlock
           variant={serviceSectionVariants[2]}
           titlePrefix={titleStart}
-          titleAccent={eagleServiceFeature.accent}
+          titleAccent={`${eagleServiceFeature.accent} `}
           titleSuffix={serviceSectionVariants[2].titleSuffix}
           firstCard={firstCard}
           secondCard={secondCard}
@@ -533,15 +548,15 @@ export function EagleServiceSection() {
         <ServiceSectionBlock
           variant={{ ...serviceSectionVariants[5], compact: true }}
           titlePrefix={titleStart}
-          titleAccent="TikTok"
-          titleSuffix={eagleServiceFeature.title.split(eagleServiceFeature.accent)[1]}
+          titleAccent="TikTok "
+          titleSuffix="Likes"
           firstCard={firstCard}
           secondCard={secondCard}
         />
         <ServiceSectionBlock
           variant={serviceSectionVariants[6]}
           titlePrefix={titleStart}
-          titleAccent="TikTok"
+          titleAccent="TikTok "
           titleSuffix={serviceSectionVariants[6].titleSuffix}
           firstCard={firstCard}
           secondCard={secondCard}

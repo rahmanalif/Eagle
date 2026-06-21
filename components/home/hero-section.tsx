@@ -19,11 +19,11 @@ export function HeroSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <section className="relative isolate min-h-[797px] overflow-hidden md:min-h-screen">
+    <section className="relative isolate min-h-[797px] overflow-hidden rounded-b-[65px] md:min-h-screen md:rounded-b-none">
       <div className="pointer-events-none absolute left-[-143px] top-[283px] z-0 h-[457px] w-[179px] rounded-full bg-[#0067DB] blur-[100px] sm:h-[340px] sm:w-[340px] lg:left-[-240px] lg:h-[420px] lg:w-[420px] lg:blur-[100px]" />
       <div className="pointer-events-none absolute left-[24px] top-[-100px] z-0 h-[246px] w-[310px] rounded-full bg-[#0067DB] blur-[100px] sm:h-[280px] sm:w-[280px] lg:h-[320px] lg:w-[320px] lg:blur-[80px]" />
       <div className="pointer-events-none absolute right-[-123px] top-[296px] z-0 h-[460px] w-[170px] rounded-full bg-[#0067DB] blur-[100px] md:hidden" />
-      <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[797px] bg-[linear-gradient(180deg,rgba(6,99,205,0.65)_19.2%,rgba(0,0,0,0.65)_100%)] md:hidden" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[797px] rounded-b-[65px] bg-[linear-gradient(180deg,rgba(6,99,205,0.20)_19%,rgba(0,0,0,0.20)_100%)] md:hidden" />
 
       <Image
         src={images.hero_top_shadow}
@@ -46,7 +46,7 @@ export function HeroSection() {
       <Image
         src={images.leftHeroImg}
         alt=""
-        className="pointer-events-none absolute left-[-11px] top-[376px] z-[1] h-auto w-[130px] select-none opacity-[0.5] sm:left-[16px] sm:w-[28px] md:left-[20px] md:top-[104px] md:w-[32px] lg:left-[26px] lg:top-[112px] lg:w-[36px] lg:opacity-[0.58]"
+        className="pointer-events-none absolute left-0 top-[51px] z-[1] h-auto w-[374px] select-none sm:left-[16px] sm:w-[28px] md:left-[20px] md:top-[104px] md:w-[32px] lg:left-[26px] lg:top-[112px] lg:w-[36px] lg:opacity-[0.58]"
         priority
       />
       <Image
@@ -58,7 +58,7 @@ export function HeroSection() {
       <Image
         src={images.rightHeroImg}
         alt=""
-        className="pointer-events-none absolute right-[-167px] top-[349px] z-[1] h-auto w-[325px] select-none opacity-30 sm:w-[136px] md:right-[-6px] md:top-[66px] md:w-[152px] md:opacity-50 lg:right-[-4px] lg:top-[76px] lg:w-[172px] lg:opacity-60"
+        className="pointer-events-none absolute right-[-64px] top-[385px] z-[1] h-auto w-[309px] origin-top-left rotate-[37deg] select-none opacity-30 sm:rotate-0 sm:w-[136px] md:right-[-6px] md:top-[66px] md:w-[152px] md:opacity-50 lg:right-[-4px] lg:top-[76px] lg:w-[172px] lg:opacity-60"
         priority
       />
       <Image
@@ -97,11 +97,25 @@ export function HeroSection() {
           </nav>
 
           <div className="flex items-center gap-3 z-[51]">
+            {/* Mobile Rating Display */}
+            <div className="flex items-center gap-2.5 md:hidden">
+              <span className="text-[14px] font-semibold capitalize text-white" style={{ fontFamily: "var(--font-open-sans)" }}>5.0</span>
+              <div className="flex items-center gap-[6.28px]">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <span key={i} className="flex h-[17.58px] w-[17.58px] items-center justify-center rounded-[3.14px] bg-[#01AAFF]">
+                    <svg width="11" height="11" viewBox="0 0 18 18" fill="none">
+                      <path d="M8.04785 1.19043C8.34738 0.269579 9.65067 0.269588 9.9502 1.19043L11.4951 5.94629H16.4951C17.4638 5.94629 17.8665 7.18543 17.083 7.75488L13.0381 10.6943L14.583 15.4492C14.8824 16.3705 13.8277 17.1368 13.0439 16.5674L8.99902 13.6289L4.9541 16.5674C4.17038 17.1368 3.11569 16.3705 3.41504 15.4492L4.95996 10.6943L0.915039 7.75488C0.131521 7.18543 0.534272 5.94629 1.50293 5.94629H6.50293L8.04785 1.19043Z" fill="white" stroke="white" />
+                    </svg>
+                  </span>
+                ))}
+              </div>
+            </div>
+
             <Link
               href="/"
-              className="inline-flex h-[28px] items-center gap-1.5 rounded-[8px] border border-[rgba(110,162,224,0.42)] bg-[rgba(8,24,43,0.94)] px-2 text-[11px] font-bold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] no-underline sm:h-auto sm:px-[14px] sm:py-[9px] sm:text-[12px] md:text-[13px]"
+              className="hidden items-center gap-1.5 rounded-[8px] border border-[rgba(110,162,224,0.42)] bg-[rgba(8,24,43,0.94)] no-underline shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] sm:inline-flex sm:h-auto sm:px-[14px] sm:py-[9px] sm:text-[12px] sm:font-bold sm:text-white md:text-[13px]"
             >
-              <Image src={images.userIcon} alt="" className="h-3.5 w-3.5 sm:h-auto sm:w-auto" />
+              <Image src={images.userIcon} alt="" className="sm:h-auto sm:w-auto" />
               <span>Login</span>
             </Link>
 
@@ -120,7 +134,7 @@ export function HeroSection() {
       </div>
 
       <div className="relative z-[2] mx-auto w-full max-w-[1220px] px-4 pb-[17px] sm:px-6 md:px-10 md:pb-10 lg:px-8">
-        <div className="pt-[42px] sm:pt-16 md:pt-20 lg:pt-[96px]">
+        <div className="pt-[43px] sm:pt-16 md:pt-20 lg:pt-[96px]">
           <div className="w-full text-center flex flex-col justify-center items-center mx-auto max-w-[1191px]">
             <h1 className="m-0 max-w-[333px] text-[26px] font-semibold leading-[32px] tracking-normal text-white text-balance md:max-w-none md:text-[clamp(1.95rem,3.6vw,3.75rem)] md:font-extrabold md:leading-[1.06] md:tracking-[-0.04em]">
               Buy Tiktok and Instagram Followers and Views & Likes and{" "}
@@ -135,7 +149,7 @@ export function HeroSection() {
           {/* Service Tabs + Featured Buttons Grid */}
           <div className="mx-auto mt-[37px] w-full max-w-[346px] sm:mt-12 sm:max-w-[1240px] lg:mt-14">
             {/* Top Service Tabs */}
-            <div className="grid h-[58px] grid-cols-4 items-center gap-[59px] rounded-t-[10px] border border-[rgba(255,255,255,0.22)] bg-white/10 px-[15px] sm:h-auto sm:gap-0 sm:rounded-none sm:border-0 sm:bg-transparent sm:px-0">
+            <div className="flex h-[58px] items-center justify-evenly rounded-t-[10px] border border-[rgba(255,255,255,0.20)] bg-[rgba(255,255,255,0.10)] px-[15px] shadow-[0_2px_2px_rgba(0,0,0,0.10)] sm:grid sm:h-auto sm:grid-cols-4 sm:justify-start sm:gap-0 sm:rounded-none sm:border-0 sm:bg-transparent sm:px-0 sm:shadow-none">
               {topServiceTabs.map((service) => (
                 <ServiceTabCard key={service.name} service={service} />
               ))}
@@ -155,7 +169,7 @@ export function HeroSection() {
             </div>
 
             {/* Bottom Service Tabs */}
-            <div className="grid h-[58px] grid-cols-4 items-center gap-[59px] rounded-b-[10px] border border-[rgba(255,255,255,0.22)] bg-white/10 px-[15px] sm:h-auto sm:gap-0 sm:rounded-none sm:border-0 sm:bg-transparent sm:px-0">
+            <div className="flex h-[58px] items-center justify-evenly rounded-b-[10px] border border-[rgba(255,255,255,0.20)] bg-[rgba(255,255,255,0.10)] px-[15px] shadow-[0_2px_2px_rgba(0,0,0,0.10)] sm:grid sm:h-auto sm:grid-cols-4 sm:justify-start sm:gap-0 sm:rounded-none sm:border-0 sm:bg-transparent sm:px-0 sm:shadow-none">
               {bottomServiceTabs.map((service) => (
                 <ServiceTabCard key={service.name} service={service} bottom />
               ))}
