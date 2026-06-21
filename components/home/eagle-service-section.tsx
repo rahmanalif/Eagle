@@ -21,6 +21,7 @@ type ServiceSectionVariant = {
   rightCardClassName: string;
   accentClassName: string;
   bulletIconClassName: string;
+  bulletCheckColor: string;
   bulletTextClassName: string;
   buttonClassName: string;
   reviewIconClassName?: string;
@@ -32,92 +33,20 @@ const serviceSectionVariants: ServiceSectionVariant[] = [
   {
     cardKeys: ["blue", "blue"],
     containerClassName:
-      "mt-14 rounded-[34px] bg-gradient-to-b from-[#041a2e] to-[#050505] px-8 py-9 shadow-[0_30px_90px_rgba(0,0,0,0.34)] md:px-10 md:py-11 lg:px-8 lg:py-10",
+      "mt-14 rounded-[40px] bg-gradient-to-b from-[rgba(0,132,255,0.17)] to-[rgba(5,5,5,0.17)] px-5 py-8 shadow-[0_4px_4px_rgba(0,0,0,0.25)] md:px-8 lg:px-[50px] lg:py-[68px]",
     gridClassName:
-      "grid gap-6 md:grid-cols-2 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.72fr)_minmax(0,0.72fr)]",
+      "flex flex-col gap-9 lg:flex-row lg:items-center lg:gap-9",
     leftCardsClassName: "",
     leftCardClassName:
-      "rounded-[28px] border border-[rgba(88,139,203,0.18)] bg-[rgba(8,22,40,0.56)] px-7 py-8 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]",
-    rightCardClassName: "rounded-[28px] px-4 py-4 md:col-span-2 md:px-6 md:py-6 lg:col-span-1",
-    accentClassName: "text-[#267dff]",
+      "w-[260px] h-[440px] rounded-[40px] border border-[rgba(255,255,255,0.15)] bg-[rgba(0,132,255,0.10)] px-5 py-8 text-center",
+    rightCardClassName: "",
+    accentClassName: "text-[#2577FF]",
     bulletIconClassName:
-      "bg-[#f6fbff] text-[10px] font-bold text-[#1787ff]",
-    bulletTextClassName: "text-[15px] leading-[1.45] text-[#f0f6ff]",
+      "shrink-0 inline-flex h-[18px] w-[18px] items-center justify-center rounded-full bg-white shadow-[0_0_8px_rgba(0,0,0,0.40)] ring-2 ring-[#62ABFF]",
+    bulletCheckColor: "#62ABFF",
+    bulletTextClassName: "text-[15px] font-semibold leading-[26px] text-white",
     buttonClassName:
-      "mt-8 inline-flex min-h-[58px] w-full items-center justify-center rounded-[10px] bg-[linear-gradient(180deg,#2f78f5_0%,#235fd8_100%)] px-6 text-[15px] font-semibold text-white shadow-[0_18px_40px_rgba(32,98,225,0.26)] transition-transform duration-200 hover:translate-y-[-1px]",
-    reviewIconClassName: "text-[#109cff]",
-    titleSuffix: "Follower",
-  },
-  {
-    cardKeys: ["pink", "pink"],
-    containerClassName:
-      "mt-8 rounded-[34px] bg-gradient-to-b from-[#2c042d] to-[#050505] sm:px-7 md:px-8 md:py-8 lg:px-8 lg:py-8",
-    gridClassName:
-      "grid gap-5 md:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] md:items-start lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-stretch",
-    leftCardsClassName: "grid h-full gap-4 sm:grid-cols-2 sm:items-stretch",
-    leftCardClassName:
-      "flex min-h-full flex-col rounded-[22px] border border-[rgba(161,72,171,0.22)] bg-[rgba(51,11,53,0.62)] px-5 py-6 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]",
-    rightCardClassName: "rounded-[28px] px-2 py-2 md:px-4 md:py-4",
-    accentClassName: "text-[#FB00FF]",
-    bulletIconClassName:
-      "bg-[#ffe6f5] text-[10px] font-bold text-[#ff2da5]",
-    bulletTextClassName: "text-[14px] leading-[1.45] text-[#f4ebf7]",
-    buttonClassName:
-      "mt-8 inline-flex min-h-[52px] w-full items-center justify-center rounded-[8px] bg-[linear-gradient(180deg,#ff37b2_0%,#d80c8c_100%)] px-6 text-[14px] font-semibold text-white shadow-[#FE06A3] transition-transform duration-200 hover:translate-y-[-1px]",
-  },
-  {
-    cardKeys: ["green", "green"],
-    containerClassName:
-      "mt-14 rounded-[34px] bg-gradient-to-b from-[#042e09] to-[#050505] px-8 py-9 shadow-[0_30px_90px_rgba(0,0,0,0.34)] md:px-10 md:py-11 lg:px-8 lg:py-10",
-    gridClassName:
-      "grid gap-6 md:grid-cols-2 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.72fr)_minmax(0,0.72fr)]",
-    leftCardsClassName: "",
-    leftCardClassName:
-      "rounded-[28px] border border-[rgba(88,139,203,0.18)] bg-[#04F31F1A] px-7 py-8 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]",
-    rightCardClassName: "rounded-[28px] px-4 py-4 md:col-span-2 md:px-6 md:py-6 lg:col-span-1",
-    accentClassName: "text-[#1ED760]",
-    bulletIconClassName:
-      "bg-[#f6fbff] text-[10px] font-bold text-[#1787ff]",
-    bulletTextClassName: "text-[15px] leading-[1.45] text-[#f0f6ff]",
-    buttonClassName:
-      "mt-8 inline-flex min-h-[58px] w-full items-center justify-center rounded-[10px] bg-[#1ED760] px-6 text-[15px] font-semibold text-white shadow-[0_18px_40px_rgba(32,98,225,0.26)] transition-transform duration-200 hover:translate-y-[-1px]",
-    reviewIconClassName: "text-[#109cff]",
-    titleSuffix: "Views",
-  },
-  {
-    cardKeys: ["red", "red"],
-    containerClassName:
-      "mt-8 rounded-[34px] bg-gradient-to-b from-[#2f0505] to-[#050505] sm:px-7 md:px-8 md:py-8 lg:px-8 lg:py-8",
-    gridClassName:
-      "grid gap-5 md:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] md:items-start lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-stretch",
-    leftCardsClassName: "grid h-full gap-4 sm:grid-cols-2 sm:items-stretch",
-    leftCardClassName:
-      "flex min-h-full flex-col rounded-[22px] border border-[rgba(161,72,171,0.22)] bg-[#FF00001A] px-5 py-6 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]",
-    rightCardClassName: "rounded-[28px] px-2 py-2 md:px-4 md:py-4",
-    accentClassName: "text-[#FF0000]",
-    bulletIconClassName:
-      "bg-[#ffe6f5] text-[10px] font-bold text-[#ff2da5]",
-    bulletTextClassName: "text-[14px] leading-[1.45] text-[#f4ebf7]",
-    buttonClassName:
-      "mt-8 inline-flex min-h-[52px] w-full items-center justify-center rounded-[8px] bg-[#FF0000] px-6 text-[14px] font-semibold text-white shadow-[#FE06A3] transition-transform duration-200 hover:translate-y-[-1px]",
-    titleSuffix: "Comments",
-  },
-  {
-    cardKeys: ["blue", "blue"],
-    containerClassName:
-      "mt-14 rounded-[34px] bg-gradient-to-b from-[#041a2e] to-[#050505] px-8 py-9 shadow-[0_30px_90px_rgba(0,0,0,0.34)] md:px-10 md:py-11 lg:px-8 lg:py-10",
-    gridClassName:
-      "grid gap-6 md:grid-cols-2 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.72fr)_minmax(0,0.72fr)]",
-    leftCardsClassName: "",
-    leftCardClassName:
-      "rounded-[28px] border border-[rgba(88,139,203,0.18)] bg-[rgba(8,22,40,0.56)] px-7 py-8 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]",
-    rightCardClassName: "rounded-[28px] px-4 py-4 md:col-span-2 md:px-6 md:py-6 lg:col-span-1",
-    accentClassName: "text-[#267dff]",
-    bulletIconClassName:
-      "bg-[#f6fbff] text-[10px] font-bold text-[#1787ff]",
-    bulletTextClassName: "text-[15px] leading-[1.45] text-[#f0f6ff]",
-    buttonClassName:
-      "mt-8 inline-flex min-h-[58px] w-full items-center justify-center rounded-[10px] bg-[linear-gradient(180deg,#2f78f5_0%,#235fd8_100%)] px-6 text-[15px] font-semibold text-white shadow-[0_18px_40px_rgba(32,98,225,0.26)] transition-transform duration-200 hover:translate-y-[-1px]",
+      "mt-8 inline-flex min-h-[48px] w-full items-center justify-center rounded-[9px] bg-[rgba(37,119,255,0.80)] px-6 text-[16px] font-bold capitalize text-white transition-opacity duration-200 hover:opacity-90",
     reviewIconClassName: "text-[#109cff]",
     titleSuffix: "Followers",
   },
@@ -133,8 +62,9 @@ const serviceSectionVariants: ServiceSectionVariant[] = [
     rightCardClassName: "rounded-[28px] px-2 py-2 md:px-4 md:py-4",
     accentClassName: "text-[#FB00FF]",
     bulletIconClassName:
-      "bg-[#ffe6f5] text-[10px] font-bold text-[#ff2da5]",
-    bulletTextClassName: "text-[14px] leading-[1.45] text-[#f4ebf7]",
+      "shrink-0 inline-flex h-[18px] w-[18px] items-center justify-center rounded-full bg-white shadow-[0_0_8px_rgba(0,0,0,0.40)] ring-2 ring-[#ff37b2]",
+    bulletCheckColor: "#ff37b2",
+    bulletTextClassName: "text-[14px] font-semibold leading-[1.45] text-[#f4ebf7]",
     buttonClassName:
       "mt-8 inline-flex min-h-[52px] w-full items-center justify-center rounded-[8px] bg-[linear-gradient(180deg,#ff37b2_0%,#d80c8c_100%)] px-6 text-[14px] font-semibold text-white shadow-[#FE06A3] transition-transform duration-200 hover:translate-y-[-1px]",
   },
@@ -143,15 +73,16 @@ const serviceSectionVariants: ServiceSectionVariant[] = [
     containerClassName:
       "mt-14 rounded-[34px] bg-gradient-to-b from-[#042e09] to-[#050505] px-8 py-9 shadow-[0_30px_90px_rgba(0,0,0,0.34)] md:px-10 md:py-11 lg:px-8 lg:py-10",
     gridClassName:
-      "grid gap-6 md:grid-cols-2 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.72fr)_minmax(0,0.72fr)]",
+      "grid gap-6 md:grid-cols-2 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]",
     leftCardsClassName: "",
     leftCardClassName:
       "rounded-[28px] border border-[rgba(88,139,203,0.18)] bg-[#04F31F1A] px-7 py-8 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]",
     rightCardClassName: "rounded-[28px] px-4 py-4 md:col-span-2 md:px-6 md:py-6 lg:col-span-1",
     accentClassName: "text-[#1ED760]",
     bulletIconClassName:
-      "bg-[#f6fbff] text-[10px] font-bold text-[#1787ff]",
-    bulletTextClassName: "text-[15px] leading-[1.45] text-[#f0f6ff]",
+      "shrink-0 inline-flex h-[18px] w-[18px] items-center justify-center rounded-full bg-white shadow-[0_0_8px_rgba(0,0,0,0.40)] ring-2 ring-[#1ED760]",
+    bulletCheckColor: "#1ED760",
+    bulletTextClassName: "text-[15px] font-semibold leading-[1.45] text-[#f0f6ff]",
     buttonClassName:
       "mt-8 inline-flex min-h-[58px] w-full items-center justify-center rounded-[10px] bg-[#1ED760] px-6 text-[15px] font-semibold text-white shadow-[0_18px_40px_rgba(32,98,225,0.26)] transition-transform duration-200 hover:translate-y-[-1px]",
     reviewIconClassName: "text-[#109cff]",
@@ -169,8 +100,86 @@ const serviceSectionVariants: ServiceSectionVariant[] = [
     rightCardClassName: "rounded-[28px] px-2 py-2 md:px-4 md:py-4",
     accentClassName: "text-[#FF0000]",
     bulletIconClassName:
-      "bg-[#ffe6f5] text-[10px] font-bold text-[#ff2da5]",
-    bulletTextClassName: "text-[14px] leading-[1.45] text-[#f4ebf7]",
+      "shrink-0 inline-flex h-[18px] w-[18px] items-center justify-center rounded-full bg-white shadow-[0_0_8px_rgba(0,0,0,0.40)] ring-2 ring-[#FF0000]",
+    bulletCheckColor: "#FF0000",
+    bulletTextClassName: "text-[14px] font-semibold leading-[1.45] text-[#f4ebf7]",
+    buttonClassName:
+      "mt-8 inline-flex min-h-[52px] w-full items-center justify-center rounded-[8px] bg-[#FF0000] px-6 text-[14px] font-semibold text-white shadow-[#FE06A3] transition-transform duration-200 hover:translate-y-[-1px]",
+    titleSuffix: "Comments",
+  },
+  {
+    cardKeys: ["blue", "blue"],
+    containerClassName:
+      "mt-14 rounded-[40px] bg-gradient-to-b from-[rgba(0,132,255,0.17)] to-[rgba(5,5,5,0.17)] px-5 py-8 shadow-[0_4px_4px_rgba(0,0,0,0.25)] md:px-8 lg:px-[50px] lg:py-[68px]",
+    gridClassName:
+      "flex flex-col gap-9 lg:flex-row lg:items-center lg:gap-9",
+    leftCardsClassName: "",
+    leftCardClassName:
+      "w-[260px] h-[440px] rounded-[40px] border border-[rgba(255,255,255,0.15)] bg-[rgba(0,132,255,0.10)] px-5 py-8 text-center",
+    rightCardClassName: "",
+    accentClassName: "text-[#2577FF]",
+    bulletIconClassName:
+      "shrink-0 inline-flex h-[18px] w-[18px] items-center justify-center rounded-full bg-white shadow-[0_0_8px_rgba(0,0,0,0.40)] ring-2 ring-[#62ABFF]",
+    bulletCheckColor: "#62ABFF",
+    bulletTextClassName: "text-[15px] font-semibold leading-[26px] text-white",
+    buttonClassName:
+      "mt-8 inline-flex min-h-[48px] w-full items-center justify-center rounded-[9px] bg-[rgba(37,119,255,0.80)] px-6 text-[16px] font-bold capitalize text-white transition-opacity duration-200 hover:opacity-90",
+    reviewIconClassName: "text-[#109cff]",
+    titleSuffix: "Followers",
+  },
+  {
+    cardKeys: ["pink", "pink"],
+    containerClassName:
+      "mt-8 rounded-[34px] bg-gradient-to-b from-[#2c042d] to-[#050505] sm:px-7 md:px-8 md:py-8 lg:px-8 lg:py-8",
+    gridClassName:
+      "grid gap-5 md:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] md:items-start lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-stretch",
+    leftCardsClassName: "grid h-full gap-4 sm:grid-cols-2 sm:items-stretch",
+    leftCardClassName:
+      "flex min-h-full flex-col rounded-[22px] border border-[rgba(161,72,171,0.22)] bg-[rgba(51,11,53,0.62)] px-5 py-6 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]",
+    rightCardClassName: "rounded-[28px] px-2 py-2 md:px-4 md:py-4",
+    accentClassName: "text-[#FB00FF]",
+    bulletIconClassName:
+      "shrink-0 inline-flex h-[18px] w-[18px] items-center justify-center rounded-full bg-white shadow-[0_0_8px_rgba(0,0,0,0.40)] ring-2 ring-[#ff37b2]",
+    bulletCheckColor: "#ff37b2",
+    bulletTextClassName: "text-[14px] font-semibold leading-[1.45] text-[#f4ebf7]",
+    buttonClassName:
+      "mt-8 inline-flex min-h-[52px] w-full items-center justify-center rounded-[8px] bg-[linear-gradient(180deg,#ff37b2_0%,#d80c8c_100%)] px-6 text-[14px] font-semibold text-white shadow-[#FE06A3] transition-transform duration-200 hover:translate-y-[-1px]",
+  },
+  {
+    cardKeys: ["green", "green"],
+    containerClassName:
+      "mt-14 rounded-[34px] bg-gradient-to-b from-[#042e09] to-[#050505] px-8 py-9 shadow-[0_30px_90px_rgba(0,0,0,0.34)] md:px-10 md:py-11 lg:px-8 lg:py-10",
+    gridClassName:
+      "grid gap-6 md:grid-cols-2 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]",
+    leftCardsClassName: "",
+    leftCardClassName:
+      "rounded-[28px] border border-[rgba(88,139,203,0.18)] bg-[#04F31F1A] px-7 py-8 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]",
+    rightCardClassName: "rounded-[28px] px-4 py-4 md:col-span-2 md:px-6 md:py-6 lg:col-span-1",
+    accentClassName: "text-[#1ED760]",
+    bulletIconClassName:
+      "shrink-0 inline-flex h-[18px] w-[18px] items-center justify-center rounded-full bg-white shadow-[0_0_8px_rgba(0,0,0,0.40)] ring-2 ring-[#1ED760]",
+    bulletCheckColor: "#1ED760",
+    bulletTextClassName: "text-[15px] font-semibold leading-[1.45] text-[#f0f6ff]",
+    buttonClassName:
+      "mt-8 inline-flex min-h-[58px] w-full items-center justify-center rounded-[10px] bg-[#1ED760] px-6 text-[15px] font-semibold text-white shadow-[0_18px_40px_rgba(32,98,225,0.26)] transition-transform duration-200 hover:translate-y-[-1px]",
+    reviewIconClassName: "text-[#109cff]",
+    titleSuffix: "Views",
+  },
+  {
+    cardKeys: ["red", "red"],
+    containerClassName:
+      "mt-8 rounded-[34px] bg-gradient-to-b from-[#2f0505] to-[#050505] sm:px-7 md:px-8 md:py-8 lg:px-8 lg:py-8",
+    gridClassName:
+      "grid gap-5 md:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] md:items-start lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-stretch",
+    leftCardsClassName: "grid h-full gap-4 sm:grid-cols-2 sm:items-stretch",
+    leftCardClassName:
+      "flex min-h-full flex-col rounded-[22px] border border-[rgba(161,72,171,0.22)] bg-[#FF00001A] px-5 py-6 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]",
+    rightCardClassName: "rounded-[28px] px-2 py-2 md:px-4 md:py-4",
+    accentClassName: "text-[#FF0000]",
+    bulletIconClassName:
+      "shrink-0 inline-flex h-[18px] w-[18px] items-center justify-center rounded-full bg-white shadow-[0_0_8px_rgba(0,0,0,0.40)] ring-2 ring-[#FF0000]",
+    bulletCheckColor: "#FF0000",
+    bulletTextClassName: "text-[14px] font-semibold leading-[1.45] text-[#f4ebf7]",
     buttonClassName:
       "mt-8 inline-flex min-h-[52px] w-full items-center justify-center rounded-[8px] bg-[#FF0000] px-6 text-[14px] font-semibold text-white shadow-[#FE06A3] transition-transform duration-200 hover:translate-y-[-1px]",
     titleSuffix: "Comments",
@@ -300,18 +309,10 @@ function ServiceSectionBlock({
     `${variant.cardKeys[0]}-eagle` as ServiceCardArtVariant,
     `${variant.cardKeys[1]}-write` as ServiceCardArtVariant,
   ];
-  const gradientClassName =
-    variant.cardKeys[0] === "blue"
-      ? "from-[#0084ff] to-[#050505]"
-      : variant.cardKeys[0] === "pink"
-        ? "from-[#fb00ff] to-[#050505]"
-        : variant.cardKeys[0] === "green"
-          ? "from-[#00ff1e] to-[#050505]"
-          : "from-[#ff0000] to-[#050505]";
 
   return (
     <div
-      className={`mx-auto mt-0 w-full max-w-[1078px] rounded-[32px] bg-gradient-to-b ${gradientClassName} px-5 py-8 shadow-[0_30px_90px_rgba(0,0,0,0.34)] md:px-8 lg:h-[585px] lg:rounded-[40px] lg:px-[56px] lg:py-[72px]`}
+      className={`mx-auto mt-0 w-full max-w-[1078px] ${variant.containerClassName}`}
     >
       <div className={variant.gridClassName}>
         {variant.compact ? (
@@ -320,7 +321,7 @@ function ServiceSectionBlock({
               {[firstCard, secondCard].map((card, index) => (
                 <article
                   key={`${variant.cardKeys[0]}-compact-${card.title}`}
-                  className={`${variant.leftCardClassName} lg:h-[441px]`}
+                  className={`${variant.leftCardClassName} lg:min-h-[441px]`}
                 >
                   <ServiceCardArt variant={cardVariants[index]} />
                   <h4 className="mt-4 text-[16px] font-semibold leading-[1.45] text-white">
@@ -333,8 +334,8 @@ function ServiceSectionBlock({
               ))}
             </div>
 
-            <article className={`${variant.rightCardClassName} lg:h-[441px]`}>
-              <div className="inline-flex items-center gap-1 rounded-full bg-white px-[9px] py-[4px] text-[11px] font-semibold text-[#506171]">
+            <article className={`${variant.rightCardClassName} lg:min-h-[441px]`}>
+              <div className="inline-flex items-center gap-1 rounded-full bg-[#D4E3EF] px-[9px] py-[4px] text-[11px] font-semibold text-[#506171]">
                 <span className={variant.reviewIconClassName || "text-[#109cff]"}>
                   ★
                 </span>
@@ -351,10 +352,10 @@ function ServiceSectionBlock({
               <div className="mt-7 space-y-3.5">
                 {eagleServiceFeature.bullets.map((bullet) => (
                   <div key={`${titleAccent}-${bullet}`} className="flex items-start gap-3">
-                    <span
-                      className={`mt-[2px] inline-flex h-[16px] w-[16px] shrink-0 items-center justify-center rounded-full ${variant.bulletIconClassName}`}
-                    >
-                      ✓
+                    <span className={`mt-[2px] ${variant.bulletIconClassName}`}>
+                      <svg width="8" height="7" viewBox="0 0 8 7" fill="none">
+                        <path d="M1 3L3 5.5L7 1" stroke={variant.bulletCheckColor} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
                     </span>
                     <p className={variant.bulletTextClassName}>{bullet}</p>
                   </div>
@@ -368,8 +369,8 @@ function ServiceSectionBlock({
           </>
         ) : (
           <>
-            <article className={`${variant.rightCardClassName} lg:h-[441px]`}>
-              <div className="inline-flex items-center gap-1 rounded-full bg-white px-[9px] py-[4px] text-[11px] font-semibold text-[#506171]">
+            <article className={`${variant.rightCardClassName} lg:min-h-[441px]`}>
+              <div className="inline-flex items-center gap-1 rounded-full bg-[#D4E3EF] px-[9px] py-[4px] text-[11px] font-semibold text-[#506171]">
                 <span className={variant.reviewIconClassName || "text-[#109cff]"}>
                   ★
                 </span>
@@ -386,10 +387,10 @@ function ServiceSectionBlock({
               <div className="mt-8 space-y-4">
                 {eagleServiceFeature.bullets.map((bullet) => (
                   <div key={`${titleAccent}-${bullet}`} className="flex items-start gap-3">
-                    <span
-                      className={`mt-[2px] inline-flex h-[16px] w-[16px] shrink-0 items-center justify-center rounded-full ${variant.bulletIconClassName}`}
-                    >
-                      ✓
+                    <span className={`mt-[2px] ${variant.bulletIconClassName}`}>
+                      <svg width="8" height="7" viewBox="0 0 8 7" fill="none">
+                        <path d="M1 3L3 5.5L7 1" stroke={variant.bulletCheckColor} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
                     </span>
                     <p className={variant.bulletTextClassName}>{bullet}</p>
                   </div>
@@ -401,23 +402,27 @@ function ServiceSectionBlock({
               </button>
             </article>
 
-            {[firstCard, secondCard].map((card, index) => (
-              <article
-                key={`${variant.cardKeys[0]}-wide-${card.title}`}
-                className={`${variant.leftCardClassName} lg:h-[441px]`}
-              >
-                <ServiceCardArt variant={cardVariants[index]} />
-                <h4 className="mt-5 text-[17px] font-semibold leading-[1.45] text-white">
-                  {card.title}
-                </h4>
-                <p className="mt-4 break-all text-[11px] leading-[1.5] text-[#718195]">
-                  {card.url}
-                </p>
-                <p className="mt-5 text-[13px] leading-[1.6] text-[#8f9dae]">
-                  {card.description}
-                </p>
-              </article>
-            ))}
+            <div className="flex flex-col gap-4 sm:flex-row lg:gap-[17px]">
+              {[firstCard, secondCard].map((card, index) => (
+                <article
+                  key={`${variant.cardKeys[0]}-wide-${card.title}`}
+                  className={`${variant.leftCardClassName} flex-1 lg:min-h-[441px]`}
+                >
+                  <ServiceCardArt variant={cardVariants[index]} />
+                  <div className="mt-auto flex flex-col items-center gap-[23px]">
+                    <h4 className="text-[18px] font-bold capitalize leading-[30px] text-white">
+                      {card.title}
+                    </h4>
+                    <p className="break-all text-[15px] leading-[24px] text-[#99A1AF]">
+                      {card.url}
+                    </p>
+                    <p className="text-[15px] leading-[24px] text-[#99A1AF]">
+                      {card.description}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
           </>
         )}
       </div>

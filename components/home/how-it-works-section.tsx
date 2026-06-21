@@ -5,17 +5,17 @@ function StepIcon({ icon }: { icon: "cart" | "user" | "lock" }) {
     return (
       <svg
         aria-hidden="true"
-        viewBox="0 0 24 24"
-        className="h-[18px] w-[18px]"
+        viewBox="0 0 28 28"
+        className="h-7 w-7"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.8"
+        strokeWidth="2.33"
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <circle cx="9" cy="19" r="1.4" />
-        <circle cx="18" cy="19" r="1.4" />
-        <path d="M3 4h2.5l2.1 9.1a1 1 0 0 0 1 .78h8.9a1 1 0 0 0 .98-.8L20 8H7" />
+        <circle cx="9.33" cy="23.33" r="1.17" />
+        <circle cx="22.17" cy="23.33" r="1.17" />
+        <path d="M2.39 2.39h3.5l2.94 12.72a1.4 1.4 0 0 0 1.4 1.09h12.46a1.4 1.4 0 0 0 1.37-1.12L25.61 8.17H7.83" />
       </svg>
     );
   }
@@ -24,16 +24,17 @@ function StepIcon({ icon }: { icon: "cart" | "user" | "lock" }) {
     return (
       <svg
         aria-hidden="true"
-        viewBox="0 0 24 24"
-        className="h-[18px] w-[18px]"
+        viewBox="0 0 28 28"
+        className="h-7 w-7"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.8"
+        strokeWidth="2.33"
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <circle cx="12" cy="8" r="3.2" />
-        <path d="M5 18.5c1.8-3 4.2-4.5 7-4.5s5.2 1.5 7 4.5" />
+        <circle cx="10.5" cy="8.17" r="4.67" />
+        <path d="M21 15.17a3.5 3.5 0 0 1 3.5 3.5" />
+        <path d="M2.33 21a7 7 0 0 1 14 0" />
       </svg>
     );
   }
@@ -41,63 +42,70 @@ function StepIcon({ icon }: { icon: "cart" | "user" | "lock" }) {
   return (
     <svg
       aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-[18px] w-[18px]"
+      viewBox="0 0 28 28"
+      className="h-7 w-7"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.8"
+      strokeWidth="2.33"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <rect x="5" y="10" width="14" height="10" rx="2.5" />
-      <path d="M8 10V7.8A4 4 0 0 1 12 4a4 4 0 0 1 4 3.8V10" />
+      <rect x="3.5" y="12.83" width="21" height="12.83" rx="3.5" />
+      <path d="M8.17 12.83V8.17a5.83 5.83 0 0 1 11.67 0v4.67" />
     </svg>
   );
 }
 
 export function HowItWorksSection() {
   return (
-    <section className="relative isolate overflow-hidden border-b border-[rgba(31,86,150,0.28)] px-6 py-14 md:px-10 md:py-16 lg:px-[92px] lg:py-20">
-      <div className="pointer-events-none absolute left-[-140px] top-[92px] h-[260px] w-[260px] rounded-full bg-[rgba(8,94,204,0.2)] blur-[90px] sm:h-[320px] sm:w-[320px]" />
-      <div className="pointer-events-none absolute right-[-140px] top-0 h-[360px] w-[360px] rounded-full bg-[rgba(8,94,204,0.18)] blur-[110px]" />
-
-      <div className="relative z-[1] mx-auto max-w-[1020px]">
-        <div className="mx-auto max-w-[560px] text-center">
-          <h2 className="text-[clamp(2rem,3vw,3.2rem)] font-bold tracking-[-0.04em] text-white">
+    <section className="relative isolate overflow-hidden px-6 py-14 md:px-10 md:py-16 lg:px-[92px] lg:py-20">
+      <div className="relative z-[1] mx-auto max-w-[1280px]">
+        <div className="mx-auto max-w-[650px] text-center">
+          <h2 className="text-[48px] font-bold text-white">
             How it works
           </h2>
-          <p className="mx-auto mt-5 max-w-[430px] text-[14px] leading-[1.55] text-[#8b98a8] sm:text-[15px]">
+          <p className="mx-auto mt-4 text-[18px] font-medium leading-[1.3] text-[#99A1AF]">
             Ordering services is simple — pick your package, pay quickly, and
             watch your growth begin instantly
           </p>
         </div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:mt-14 lg:grid-cols-3">
+        <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {howItWorksSteps.map((step, index) => (
             <article
               key={step.number}
-              className={`relative overflow-hidden rounded-[18px] border border-[rgba(255,255,255,0.08)] bg-[linear-gradient(180deg,rgba(20,21,28,0.95)_0%,rgba(12,13,17,0.95)_100%)] px-5 py-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)] sm:px-6 sm:py-6 ${index === 2 ? "md:col-span-2 md:max-w-[420px] md:justify-self-center lg:col-span-1 lg:max-w-none" : ""}`}
+              className={`group relative overflow-hidden rounded-[24px] border border-[#27272A] bg-[linear-gradient(135deg,#18181B_0%,#09090B_100%)] p-8 ${index === 2 ? "md:col-span-2 md:max-w-[420px] md:justify-self-center lg:col-span-1 lg:max-w-none" : ""}`}
             >
-              <div
-                className="inline-flex h-[30px] w-[30px] items-center justify-center rounded-[9px]"
-                style={{
-                  backgroundColor: step.iconBackground,
-                  color: step.iconColor,
-                }}
-              >
-                <StepIcon icon={step.icon} />
-              </div>
+              <div className="pointer-events-none absolute inset-[1px] rounded-[23px] bg-[linear-gradient(135deg,rgba(255,255,255,0.05)_0%,transparent_100%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-              <div className="pointer-events-none absolute right-4 top-2 text-[66px] font-semibold leading-none tracking-[-0.08em] text-white/[0.07] sm:text-[74px]">
+              <div className="pointer-events-none absolute right-5 top-[-15px] text-[120px] font-normal leading-[180px] tracking-normal text-white/[0.05]" style={{ fontFamily: "Arial, sans-serif" }}>
                 {step.number}
               </div>
 
-              <h3 className="mt-10 text-[15px] font-semibold text-white">
-                {step.title}
-              </h3>
-              <p className="mt-4 max-w-[240px] text-[13px] leading-[1.55] text-[#919cab]">
-                {step.description}
-              </p>
+              <div className="relative z-[1]">
+                <div className="flex items-center justify-between">
+                  <div
+                    className="flex h-14 w-14 items-center justify-center rounded-2xl"
+                    style={{
+                      backgroundColor: step.iconBackground,
+                      color: step.iconColor,
+                      boxShadow: `inset 0 0 0 1px ${step.iconBorder}`,
+                    }}
+                  >
+                    <StepIcon icon={step.icon} />
+                  </div>
+                  <span className="text-base text-[#52525C]" style={{ fontFamily: "Arial, sans-serif" }}>
+                    {step.number}
+                  </span>
+                </div>
+
+                <h3 className="mt-6 text-base font-semibold text-white">
+                  {step.title}
+                </h3>
+                <p className="mt-6 max-w-[311px] text-base font-semibold leading-6 text-[#9F9FA9]">
+                  {step.description}
+                </p>
+              </div>
             </article>
           ))}
         </div>

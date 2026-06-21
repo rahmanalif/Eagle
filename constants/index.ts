@@ -280,15 +280,15 @@ export const eagleServiceFeature: EagleServiceFeature = {
     description:
         "Transform your social media journey with reliable Instagram and TikTok growth solutions. Gain real followers, likes, and views safely and instantly, helping your content reach more people and increasing your engagement organically",
     rating: "5.0",
-    reviews: "3220+",
+    reviews: "3450+",
     bullets: [
-        "Real likes from authentic Instagram users",
+        "Genuine followers delivered safely with zero risks",
         "Different follower packages available to choose",
-        "Likes delivered instantly",
-        "Option to split your likes across several posts",
-        "Cost-effective",
-        "Total safety for your data and accounts",
-        "Explosive likes growth",
+        "Followers delivered fast and securely",
+        "Cheap prices & real results",
+        "Guaranteed safe and secure",
+        "Support available 24/7",
+        "Get instant organic growth",
     ],
     buttonLabel: "Buy Instagram Likes",
     cards: [
@@ -296,13 +296,13 @@ export const eagleServiceFeature: EagleServiceFeature = {
             title: "Why Do Instagram Followers Matter?",
             url: "https://docs.google.com/document/d/100cYimpHIFPWTXJFPNO0kC8AHA7tEQ_uebv8MIRP-0/edit?usp=sharing",
             description:
-                "Learn how follower count builds trust, reach, and stronger first impressions for your profile.",
+                "",
         },
         {
             title: "Main Reasons To Buy Instagram Followers",
             url: "https://docs.google.com/document/d/100cYimpHIFPWTXJFPNO0kC8AHA7tEQ_uebv8MIRP-0/edit?usp=sharing",
             description:
-                "See why brands and creators use follower boosts to kickstart visibility and social proof.",
+                "",
         },
     ],
 };
@@ -314,6 +314,7 @@ export type HowItWorksStep = {
     icon: "cart" | "user" | "lock";
     iconColor: string;
     iconBackground: string;
+    iconBorder: string;
 };
 
 export const howItWorksSteps: HowItWorksStep[] = [
@@ -322,24 +323,27 @@ export const howItWorksSteps: HowItWorksStep[] = [
         title: "Pick a Service",
         description: "Pick the service that fits your goals and start growing now",
         icon: "cart",
-        iconColor: "#c86dff",
-        iconBackground: "rgba(133,54,185,0.18)",
+        iconColor: "#C27AFF",
+        iconBackground: "rgba(173,70,255,0.10)",
+        iconBorder: "rgba(173,70,255,0.20)",
     },
     {
         number: "02",
         title: "Enter Information",
         description: "Enter your information to get started quickly and securely!",
         icon: "user",
-        iconColor: "#5aa8ff",
-        iconBackground: "rgba(44,102,181,0.18)",
+        iconColor: "#51A2FF",
+        iconBackground: "rgba(43,127,255,0.10)",
+        iconBorder: "rgba(43,127,255,0.20)",
     },
     {
         number: "03",
         title: "Pay Securely",
         description: "Pay securely and complete your order in seconds!",
         icon: "lock",
-        iconColor: "#12d39a",
-        iconBackground: "rgba(12,122,92,0.18)",
+        iconColor: "#00D492",
+        iconBackground: "rgba(0,188,125,0.10)",
+        iconBorder: "rgba(0,188,125,0.20)",
     },
 ];
 
