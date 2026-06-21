@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { StaticImageData } from "next/image";
 import { images } from "@/constants";
 
 // --- Constants ---
@@ -36,7 +37,7 @@ function PortraitFrame({
   alt,
   widthClassName,
 }: {
-  src: any;
+  src: StaticImageData;
   alt: string;
   widthClassName: string;
 }) {

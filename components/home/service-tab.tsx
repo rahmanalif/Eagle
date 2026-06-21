@@ -16,13 +16,13 @@ export function ServiceTabCard({
 }: ServiceTabCardProps) {
   const isHighlightedTopCard = service.highlighted && !bottom;
   const baseClassName = bottom
-    ? "relative flex min-h-[56px] sm:min-h-[74px] lg:h-[100px] items-center justify-center sm:justify-start gap-4 bg-[rgba(35,58,91,0.65)] px-[14px] py-[10px] sm:px-[18px] sm:py-[14px] lg:gap-5 lg:px-[28px] first:rounded-bl-[22px] last:rounded-br-[22px]"
+    ? "relative flex min-h-[34px] items-center justify-center gap-4 bg-transparent p-0 sm:min-h-[74px] sm:justify-start sm:bg-[rgba(35,58,91,0.65)] sm:px-[18px] sm:py-[14px] lg:h-[100px] lg:gap-5 lg:px-[28px] first:rounded-bl-[22px] last:rounded-br-[22px]"
     : [
-      "relative flex min-h-[56px] items-center justify-center gap-4 bg-[rgba(35,58,91,0.65)] px-[14px] py-[10px] sm:min-h-[72px] sm:justify-start sm:px-[18px] sm:py-[12px] lg:h-[100px] lg:gap-5 lg:px-[28px]",
+      "relative flex min-h-[34px] items-center justify-center gap-4 bg-transparent p-0 sm:min-h-[72px] sm:justify-start sm:bg-[rgba(35,58,91,0.65)] sm:px-[18px] sm:py-[12px] lg:h-[100px] lg:gap-5 lg:px-[28px]",
       service.highlighted
-        ? "first:rounded-tl-[22px]"
-        : "border-b border-[rgba(79,110,154,0.22)]",
-      "first:rounded-tl-[32px] last:rounded-tr-[22px]",
+        ? "sm:first:rounded-tl-[22px]"
+        : "sm:border-b sm:border-[rgba(79,110,154,0.22)]",
+      "sm:first:rounded-tl-[32px] sm:last:rounded-tr-[22px]",
     ].join(" ")
     ;
 
@@ -41,11 +41,13 @@ export function ServiceTabCard({
           : undefined
       }
     >
-      <Image
-        src={service.icon}
-        alt=""
-        className="h-[32px] w-[32px] shrink-0 max-[640px]:h-6 max-[640px]:w-6 lg:h-[58px] lg:w-[58px]"
-      />
+      <span className="flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-[10px] border border-black/15 bg-white sm:h-auto sm:w-auto sm:rounded-none sm:border-0 sm:bg-transparent">
+        <Image
+          src={service.icon}
+          alt=""
+          className="h-5 w-5 shrink-0 object-contain sm:h-[32px] sm:w-[32px] lg:h-[58px] lg:w-[58px]"
+        />
+      </span>
       <div className="min-w-0 hidden sm:block">
         <h2
           className={`mb-3.5 whitespace-nowrap text-[15px] font-semibold leading-[1.1] tracking-normal lg:text-[18px] ${

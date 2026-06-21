@@ -173,10 +173,10 @@ export const bottomServiceTabs: ServiceTab[] = [
 ];
 
 export const featuredServiceButtons = [
-    "BUY TIKTOK FOLLOWERS",
-    "BUY TIKTOK LIKES",
-    "BUY TIKTOK VIEWS",
-    "BUY TIKTOK SHARES",
+    "Buy TikTok Followers",
+    "Buy TikTok Likes",
+    "Buy TikTok Views",
+    "Buy TikTok Shares",
 ];
 
 export const heroActivityBadges = [
