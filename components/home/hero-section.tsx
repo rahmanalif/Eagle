@@ -135,59 +135,7 @@ export function HeroSection() {
             </p>
           </div>
 
-          <div className="relative mt-8 w-full overflow-hidden rounded-[24px] bg-transparent shadow-[0_28px_70px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(255,255,255,0.04)] sm:mt-10 md:mt-12 lg:mt-[92px] lg:rounded-[30px]">
-            <div className="grid grid-cols-4 items-end bg-transparent">
-              {topServiceTabs.map((service) => (
-                <ServiceTabCard key={service.name} service={service} />
-              ))}
-            </div>
-
-            <div className="grid grid-cols-1 gap-x-5 gap-y-4 px-4 pt-6 sm:px-5 md:grid-cols-2 md:px-8 lg:px-[92px] lg:pt-[42px]">
-              {featuredServiceButtons.map((label) => (
-                <Link
-                  key={label}
-                  href="/"
-                  className="inline-flex min-h-[51px] items-center justify-center rounded-[6px] bg-[linear-gradient(90deg,#b44fcb_0%,#df2158_100%)] px-4 text-[11px] font-extrabold tracking-[0.02em] text-white no-underline shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_10px_20px_rgba(204,21,92,0.16)]"
-                >
-                  {label}
-                </Link>
-              ))}
-            </div>
-
-            <div className="mt-6 grid grid-cols-4 rounded-b-[24px] bg-[#0663CD]/10 lg:mt-[42px] lg:h-[100px] lg:rounded-b-[30px] items-center overflow-hidden">
-              {bottomServiceTabs.map((service) => (
-                <ServiceTabCard key={service.name} service={service} bottom />
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-[9px] px-4 sm:px-5 lg:mt-[34px]">
-            <div
-              className="flex items-center gap-[5px]"
-              aria-label={`${reviewStars} star rating`}
-            >
-              {Array.from({ length: reviewStars }).map((_, index) => (
-                <span
-                  key={index}
-                  className="inline-flex h-5 w-5 items-center justify-center rounded-[4px] bg-[#149fff] text-[11px] text-white shadow-[0_10px_24px_rgba(0,0,0,0.18)]"
-                >
-                  {starLabel}
-                </span>
-              ))}
-            </div>
-
-            {heroActivityBadges.map((badge, index) => (
-              <ActivityBadge key={badge} label={badge} compact={index === 1} />
-            ))}
-
-            <Link
-              href="/"
-              className="inline-flex min-h-[34px] items-center gap-2 rounded-[8px] bg-white px-[16px] text-[11px] font-semibold text-[#111827] no-underline shadow-[0_10px_24px_rgba(0,0,0,0.18)]"
-            >
-              <span className="text-[16px] leading-none">{appleMark}</span>
-              <span>Play</span>
-            </Link>
-          </div>
+          
         </div>
       </div>
     </section>
